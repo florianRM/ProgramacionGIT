@@ -12,7 +12,6 @@ public class Bloc {
 	private int numNotas;
 	private String nombre;
 	private Nota[] listaDeNotas = new Nota[NUMERONOTASMAXIMA];
-	private NotaAlarma alarmas;
 	
 	public Bloc(String nombre) {
 		this.nombre = nombre;
@@ -56,8 +55,7 @@ public class Bloc {
 			throw new BlocException("Error. La posicion que busca no existe.");
 		}
 		if (listaDeNotas[posicion] instanceof NotaAlarma) {
-			alarmas = (NotaAlarma) listaDeNotas[posicion];
-			alarmas.activar();
+			((NotaAlarma) listaDeNotas[posicion]).activar();
 		}
 	}
 	
@@ -66,8 +64,7 @@ public class Bloc {
 			throw new BlocException("Error. La posicion que busca no existe.");
 		}
 		if (listaDeNotas[posicion] instanceof NotaAlarma) {
-			alarmas = (NotaAlarma) listaDeNotas[posicion];
-			alarmas.desactivar();
+			((NotaAlarma) listaDeNotas[posicion]).desactivar();
 		}
 	}
 	
