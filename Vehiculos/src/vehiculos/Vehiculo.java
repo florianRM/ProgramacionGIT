@@ -17,17 +17,18 @@ public class Vehiculo {
 		this.matricula = matricula;
 		this.gama = GamaEnum.valueOf(gama.toUpperCase());
 		this.fechaEntrada = LocalDate.now();
-		if (this.fechaSalida != null) {
+		if (fechaSalida != null) {
 			if (fechaSalida.isBefore(fechaEntrada)) {
-				throw new VehiculoException("Error. La fecha de salida debe ser mayor a la de entrada.");
+				throw new VehiculoException("Error, no se ha podido crear el alquiler. La fecha de salida debe ser mayor a la de entrada.");
 			}
 			this.fechaSalida = fechaSalida;
-		} else {
+		}
+		else {
 			this.fechaSalida = null;
 		}
 	}
 
-	public String getMatricula() {
+	public String getMatricula() throws VehiculoException {
 		return matricula;
 	}
 	
@@ -51,9 +52,12 @@ public class Vehiculo {
 		return fechaEntrada;
 	}
 
-	public double calcularAlquiler(int dias) {
-		// TODO Auto-generated method stub
-		return 0;
+	public double getPrecio() {
+		if (this.fechaSalida == null) {
+			this.fechaSalida = LocalDate.now();
+		}
+		double resultado = gama.getPrecio() * (int) fechaEntrada.until(fechaSalida, ChronoUnit.DAYS);
+		return resultado;
 	}
 
 	@Override
@@ -77,14 +81,6 @@ public class Vehiculo {
 			return false;
 		Vehiculo other = (Vehiculo) obj;
 		return Objects.equals(matricula, other.matricula);
-	}
-	
-	public double getPrecio() {
-		if (this.fechaSalida == null) {
-			this.fechaSalida = LocalDate.now();
-		}
-		double resultado = gama.getPrecio() * (int) fechaEntrada.until(fechaSalida, ChronoUnit.DAYS);
-		return resultado;
 	}
 
 }

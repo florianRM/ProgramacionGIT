@@ -8,7 +8,7 @@ public class Coche extends Vehiculo {
 
 	public Coche(String matricula, String gama, LocalDate fechaSalida, String combustible) throws VehiculoException {
 		super(matricula, gama, fechaSalida);
-		this.combustible = CombustibleEnum.valueOf(combustible);
+		this.combustible = CombustibleEnum.valueOf(combustible.toUpperCase());
 	}
 
 	public String getCombustible() {
@@ -16,16 +16,17 @@ public class Coche extends Vehiculo {
 	}
 
 	public void setCombustible(String combustible) {
-		this.combustible = CombustibleEnum.valueOf(combustible);
+		this.combustible = CombustibleEnum.valueOf(combustible.toUpperCase());
+	}
+	
+	@Override
+	public double getPrecio() {
+		return super.getPrecio() + this.combustible.getPrecioCombustible() * this.getFechaEntrada().until(this.getFechaSalida(), ChronoUnit.DAYS);
 	}
 
 	@Override
 	public String toString() {
 		return "Coche [combustible=" + combustible + ", toString()=" + super.toString() + "]";
 	}
-	
-	@Override
-	public double getPrecio() {
-		return (super.getPrecio() + this.combustible.getPrecioCombustible()) * this.getFechaEntrada().until(this.getFechaSalida(), ChronoUnit.DAYS);
-	}
+
 }

@@ -58,7 +58,7 @@ public class Main {
 						flota[numVehiculos++] = new Furgoneta(matricula, gama, LocalDate.of(annio, mes, dia), peso);
 					} catch (Exception e) {
 						// TODO Auto-generated catch block
-						e.getMessage();
+						System.out.println(e.getMessage());
 					}
 					break;
 				default:
@@ -72,15 +72,16 @@ public class Main {
 				matricula = pedirString();
 				for (int i=0; i < numVehiculos && encontrado != true; i++) {
 					if (flota[i].getMatricula().equals(matricula) && flota[i] instanceof Coche) {
-						System.out.println(flota[i].calcularAlquiler(5));
+						System.out.println(flota[i].getPrecio());
 					}
 					else if (flota[i].getMatricula().equals(matricula) && flota[i] instanceof Furgoneta) {
-						System.out.println(flota[i].calcularAlquiler(5));
+						System.out.println(flota[i].getPrecio());
 					}
 					else if (flota[i].getMatricula().equals(matricula) && flota[i] instanceof Microbus) {
-						System.out.println(flota[i].calcularAlquiler(5));
+						System.out.println(flota[i].getPrecio());
 					}
 				}
+				break;
 			case 3:
 				System.out.println("Gracias por usar nuestros servicios.");
 				break;
@@ -106,9 +107,9 @@ public class Main {
 		System.out.println("Introduzca el día de la devolución: ");
 		Main.dia = pedirEntero();
 		System.out.println("Introduzca el mes de la devolución: ");
-		Main.dia = pedirEntero();
+		Main.mes = pedirEntero();
 		System.out.println("Introduzca el año de la devolución: ");
-		Main.dia = pedirEntero();
+		Main.annio = pedirEntero();
 	}
 	
 	private static String pedirString() {
