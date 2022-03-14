@@ -25,14 +25,15 @@ public class Bloc {
 		try {
 			listaDeNotas[numNotas] = new NotaAlarma(texto, horaAlarma, estado);
 			this.numNotas ++;
-		} catch (Exception e) {
+		} catch (NotaAlarmaException e) {
 			System.out.println(e.getMessage());
 		}
 	}
 	
 	public void addNota(String texto, LocalDateTime horaAlarma, int numMinutos) throws NotaAlarmaException {
 		try {
-			listaDeNotas[numNotas++] = new NotaAlarma(texto, horaAlarma, numMinutos);
+			listaDeNotas[numNotas] = new NotaAlarma(texto, horaAlarma, numMinutos);
+			this.numNotas++;
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
@@ -53,7 +54,7 @@ public class Bloc {
 	}
 	
 	public void updateNota(int posicion, String nuevoTexto) throws BlocException {
-		if (posicion > Bloc.NUMERONOTASMAXIMA) {
+		if (posicion > Bloc.NUMERONOTASMAXIMA || listaDeNotas[posicion] == null) {
 			throw new BlocException("La posición que buscas no existe");
 		}
 		listaDeNotas[posicion].setTexto(nuevoTexto);
