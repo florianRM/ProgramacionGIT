@@ -13,16 +13,14 @@ public class Main {
 		String texto;
 		int posicion, opc, tipoBloc, min;
 		LocalDateTime fecha;
-		Bloc nuevoBloc = null;
+		Bloc nuevoBloc;
 		
+		nuevoBloc = new Bloc(pedirNombreBloc());
 		do {
 			menu();
 			opc = pedirInteger();
 			switch (opc) {
 			case 1:
-				nuevoBloc = new Bloc(pedirNombreBloc());
-				break;
-			case 2:
 				tipoBloc = tipoBloc();
 				if (tipoBloc == 1) {
 					texto = textoNota();
@@ -53,7 +51,7 @@ public class Main {
 					System.out.println("Error. Debe escoger una de las 3 opciones.");
 				}
 				break;
-			case 3:
+			case 2:
 				posicion = pedirPosicion();
 				texto = textoNota();
 				try {
@@ -63,12 +61,17 @@ public class Main {
 					System.out.println(e.getMessage());
 				}
 				break;
-			case 4:
+			case 3:
 				System.out.println("Introduzca la posición de la nota que quiere eliminar: ");
 				posicion = pedirInteger();
-				nuevoBloc.borrarNota(posicion);
+				try {
+					nuevoBloc.borrarNota(posicion);
+				} catch (BlocException e1) {
+					// TODO Auto-generated catch block
+					System.out.println(e1.getMessage());
+				}
 				break;
-			case 5:
+			case 4:
 				posicion = pedirPosicion();
 				try {
 					System.out.println(nuevoBloc.getNota(posicion));
@@ -77,7 +80,7 @@ public class Main {
 					System.out.println(e.getMessage());
 				}
 				break;
-			case 6:
+			case 5:
 				posicion = pedirPosicion();
 				if (estadoAlarma() == true) {
 					try {
@@ -96,13 +99,13 @@ public class Main {
 					}
 				}
 				break;
-			case 7:
+			case 6:
 				System.out.println(nuevoBloc.getNombre());
 				break;
-			case 8:
+			case 7:
 				System.out.println(nuevoBloc.toString());
 				break;
-			case 9:
+			case 8:
 				System.out.println("Saliendo");
 				break;
 			default:
@@ -110,13 +113,13 @@ public class Main {
 				break;
 			}
 			
-		} while (opc != 9);
+		} while (opc != 8);
 		
 	}
 	
 	private static String pedirNombreBloc() {
 		String nombreGrupo;
-		System.out.print("Introduzca el nombre del grupo: ");
+		System.out.print("Introduzca el nombre del bloc: ");
 		nombreGrupo = pedirString();
 		return nombreGrupo;
 	}
@@ -174,15 +177,14 @@ public class Main {
 	}
 	
 	private static void menu() {
-		System.out.print("1. Crear bloc.\n"
-				+ "2. Crear nota.\n"
-				+ "3. Modificar nota.\n"
-				+ "4. Borrar nota\n"
-				+ "5. Buscar nota.\n"
-				+ "6. Activar o desactivar alarma.\n"
-				+ "7. Ver nombre del bloc.\n"
-				+ "8. Ver todas las notas.\n"
-				+ "9. Salir.\n"
+		System.out.print("1. Crear nota.\n"
+				+ "2. Modificar nota.\n"
+				+ "3. Borrar nota\n"
+				+ "4. Buscar nota.\n"
+				+ "5. Activar o desactivar alarma.\n"
+				+ "6. Ver nombre del bloc.\n"
+				+ "7. Ver todas las notas.\n"
+				+ "8. Salir.\n"
 				+ "Introduzca una opción: ");
 	}
 	
