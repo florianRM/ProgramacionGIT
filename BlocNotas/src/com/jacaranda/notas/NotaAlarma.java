@@ -4,7 +4,7 @@ import java.time.LocalDateTime;
 
 public class NotaAlarma extends Nota implements Activable {
 	private LocalDateTime fechaAlarma;
-	private static final int MINUTOSREPETIRPORDEFECTO = 5;
+	private static final int MINUTOS_REPETIR_POR_DEFECTO = 5;
 	private int minutosRepetir;
 	private boolean activado;
 	
@@ -12,7 +12,7 @@ public class NotaAlarma extends Nota implements Activable {
 		super(texto);
 		setFechaAlarma(fechaAlarma);
 		this.activado = estado;
-		this.minutosRepetir = NotaAlarma.MINUTOSREPETIRPORDEFECTO;
+		this.minutosRepetir = NotaAlarma.MINUTOS_REPETIR_POR_DEFECTO;
 	}
 	
 	public NotaAlarma(String texto, LocalDateTime fechaAlarma, int numMinutos) throws NotaAlarmaException {
@@ -25,6 +25,9 @@ public class NotaAlarma extends Nota implements Activable {
 	}
 	
 	private void setFechaAlarma(LocalDateTime fechaAlarma) throws NotaAlarmaException {
+		if (fechaAlarma == null) {
+			throw new NotaAlarmaException("Error. La fecha no puede ser nula.");
+		}
 		if (fechaAlarma.isBefore(LocalDateTime.now())) {
 			throw new NotaAlarmaException("Error. La fecha de la alarma no puede ponerse anterior a la fecha actual.");
 		}
@@ -33,10 +36,16 @@ public class NotaAlarma extends Nota implements Activable {
 		}
 	}
 	
+	public static int getMINUTOS_REPETIR_POR_DEFECTO() {
+		return NotaAlarma.MINUTOS_REPETIR_POR_DEFECTO;
+	}
+	
+	@Override
 	public void activar() {
 		this.activado = true;
 	}
 	
+	@Override
 	public void desactivar() {
 		this.activado = false;
 	}
@@ -49,6 +58,19 @@ public class NotaAlarma extends Nota implements Activable {
 	public String toString() {
 		return "NotaAlarma [fechaAlarma=" + fechaAlarma + ", minutosRepetir=" + minutosRepetir + ", activado="
 				+ activado + "]";
+	}
+
+	@Override
+	public NotaAlarma clone() throws CloneNotSupportedException {
+		NotaAlarma nueva = null;
+		try {
+			nueva = new NotaAlarma(this.getTexto(), this.fechaAlarma, this.activado);
+			nueva.minutosRepetir = this.minutosRepetir;
+		} catch (NotaAlarmaException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return nueva;
 	}
 	
 }

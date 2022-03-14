@@ -22,11 +22,20 @@ public class Bloc {
 	}
 	
 	public void addNota(String texto, LocalDateTime horaAlarma, boolean estado) throws NotaAlarmaException {
-		listaDeNotas[numNotas++] = new NotaAlarma(texto, horaAlarma, estado);
+		try {
+			listaDeNotas[numNotas] = new NotaAlarma(texto, horaAlarma, estado);
+			this.numNotas ++;
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
 	}
 	
 	public void addNota(String texto, LocalDateTime horaAlarma, int numMinutos) throws NotaAlarmaException {
-		listaDeNotas[numNotas++] = new NotaAlarma(texto, horaAlarma, numMinutos);
+		try {
+			listaDeNotas[numNotas++] = new NotaAlarma(texto, horaAlarma, numMinutos);
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
 	}
 	
 	public void borrarNota(int posicion) {

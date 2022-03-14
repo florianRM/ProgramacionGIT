@@ -9,14 +9,12 @@ public class Nota implements Comparable <Nota>{
 	private String texto;
 	private LocalDateTime fechaCreacion;
 	private LocalDateTime fechaUltimaModificacion;
-	private boolean modificado;
 	
 	public Nota(String texto) {
 		this.texto = texto;
 		this.codigo = Nota.codigoSiguiente++;
 		this.fechaCreacion = LocalDateTime.now();
-		this.fechaUltimaModificacion = LocalDateTime.now();
-		this.modificado = false;
+		this.fechaUltimaModificacion = this.fechaCreacion;
 	}
 
 	public String getTexto() {
@@ -26,7 +24,6 @@ public class Nota implements Comparable <Nota>{
 	public void setTexto(String texto) {
 		this.texto = texto;
 		this.fechaUltimaModificacion = LocalDateTime.now();
-		this.modificado = true;
 	}
 
 	public LocalDateTime getFechaCreacion() {
@@ -38,31 +35,25 @@ public class Nota implements Comparable <Nota>{
 	}
 	
 	public boolean isModificado() {
-		return this.modificado;
+		return this.fechaCreacion.equals(fechaUltimaModificacion);
 	}
 	
 	public boolean isEmpty() {
-		boolean empty = false;
-		if (this.texto.equals("")) {
-			empty = true;
-		}
-		return empty;
+		return this.texto.isEmpty();
 	}
 	
-	public boolean isCreadoAnterior(Nota nota) {
-		boolean creado = false;
-		if (this.fechaCreacion.isBefore(nota.getFechaCreacion())) {
-			creado = true;
+	public boolean isCreadoAnterior(Nota nota) throws NotaException {
+		if (nota == null) {
+			throw new NotaException("Error. No se puede comparar con nulo.");
 		}
-		return creado;
+		return this.fechaCreacion.isBefore(nota.getFechaCreacion());
 	}
 	
-	public boolean isModificadoAnterio(Nota nota) {
-		boolean modificadoAntes = false;
-		if (this.fechaUltimaModificacion.isBefore(nota.getFechaUltimaModificacion())) {
-			modificadoAntes = true;
+	public boolean isModificadoAnterio(Nota nota) throws NotaException {
+		if (nota == null) {
+			throw new NotaException("Error. No se puede comparar con nulo.");
 		}
-		return modificadoAntes;
+		return this.fechaUltimaModificacion.isBefore(nota.getFechaUltimaModificacion());
 	}
 	
 	@Override
@@ -89,16 +80,27 @@ public class Nota implements Comparable <Nota>{
 	}
 
 	@Override
-	public int compareTo(Nota o) {
+	public int compareTo(Nota otro) {
 		int resultado;
-		resultado = this.texto.compareToIgnoreCase(o.getTexto());
-		
-		if (resultado == 0) {
-			resultado = this.fechaCreacion.compareTo(o.getFechaCreacion());
+		if (otro == null) {
+			resultado = -1;
+		}
+		else {
+			resultado = this.texto.compareTo(otro.texto);
+			if (resultado == 0) {
+				resultado = this.fechaCreacion.compareTo(otro.fechaCreacion);
+			}
 		}
 		return resultado;
 	}
-	
-	
+
+	@Override
+	public Nota clone() throws CloneNotSupportedException {
+		Nota nueva = new Nota(this.texto);
+		nueva.codigo = this.codigo;
+		nueva.fechaCreacion = this.fechaCreacion;
+		nueva.fechaUltimaModificacion = this.fechaUltimaModificacion;
+		return nueva;
+	}
 	
 }
