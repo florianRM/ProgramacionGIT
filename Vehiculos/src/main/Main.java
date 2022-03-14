@@ -7,6 +7,7 @@ import vehiculos.Coche;
 import vehiculos.Furgoneta;
 import vehiculos.Microbus;
 import vehiculos.Vehiculo;
+import vehiculos.VehiculoException;
 
 public class Main {
 	private static Scanner teclado = new Scanner(System.in);
@@ -17,7 +18,7 @@ public class Main {
 	private static String tipoVehiculo, matricula, combustible, gama;
 	private static double peso;
 
-	public static void main(String[] args) throws Exception {
+	public static void main(String[] args) throws VehiculoException {
 		// TODO Auto-generated method stub
 		
 		do {
@@ -33,8 +34,9 @@ public class Main {
 					System.out.print("Introduzca el combustible: ");
 					Main.combustible = pedirString();
 					try {
-						flota[numVehiculos++] = new Coche(matricula, gama, LocalDate.of(annio, mes, dia) ,combustible);
-					} catch (Exception e) {
+						flota[numVehiculos] = new Coche(matricula, gama, LocalDate.of(annio, mes, dia) ,combustible);
+						Main.numVehiculos ++;
+					} catch (VehiculoException e) {
 						// TODO Auto-generated catch block
 						System.out.println(e.getMessage());
 					}
@@ -44,8 +46,9 @@ public class Main {
 					System.out.print("Introduzca numero de asientos: ");
 					Main.plazas = pedirEntero();
 					try {
-						flota[numVehiculos++] = new Microbus(matricula, gama, LocalDate.of(annio, mes, dia), plazas);
-					} catch (Exception e) {
+						flota[numVehiculos] = new Microbus(matricula, gama, LocalDate.of(annio, mes, dia), plazas);
+						Main.numVehiculos ++;
+					} catch (VehiculoException e) {
 						// TODO Auto-generated catch block
 						System.out.println(e.getMessage());
 					}
@@ -55,8 +58,9 @@ public class Main {
 					System.out.print("Introduzca el peso: ");
 					Main.peso = pedirReal();
 					try {
-						flota[numVehiculos++] = new Furgoneta(matricula, gama, LocalDate.of(annio, mes, dia), peso);
-					} catch (Exception e) {
+						flota[numVehiculos] = new Furgoneta(matricula, gama, LocalDate.of(annio, mes, dia), peso);
+						Main.numVehiculos ++;
+					} catch (VehiculoException e) {
 						// TODO Auto-generated catch block
 						System.out.println(e.getMessage());
 					}
@@ -80,6 +84,9 @@ public class Main {
 					else if (flota[i].getMatricula().equals(matricula) && flota[i] instanceof Microbus) {
 						System.out.println(flota[i].getPrecio());
 					}
+				}
+				if (Main.numVehiculos == 0) {
+					System.out.println("No existe ningún vehículo.");
 				}
 				break;
 			case 3:
