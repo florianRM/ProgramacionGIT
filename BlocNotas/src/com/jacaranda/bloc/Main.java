@@ -43,7 +43,6 @@ public class Main {
 					try {
 						nuevoBloc.addNota(texto, fecha, min);
 					} catch (NotaAlarmaException e) {
-						// TODO Auto-generated catch block
 						System.out.println(e.getMessage());
 					}
 				}

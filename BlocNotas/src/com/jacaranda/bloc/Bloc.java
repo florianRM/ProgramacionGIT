@@ -18,35 +18,20 @@ public class Bloc {
 	}
 	
 	public void addNota(String texto) {
-		listaDeNotas[numNotas++] = new Nota(texto);
 		listaDeNotas[numNotas] = new Nota(texto);
 		this.numNotas ++;
 	}
 	
 	public void addNota(String texto, LocalDateTime horaAlarma, boolean estado) throws NotaAlarmaException {
-		try {
-			listaDeNotas[numNotas] = new NotaAlarma(texto, horaAlarma, estado);
-			this.numNotas ++;
-		} catch (NotaAlarmaException e) {
-			System.out.println(e.getMessage());
-		}
 		listaDeNotas[numNotas] = new NotaAlarma(texto, horaAlarma, estado);
 		this.numNotas ++;
 	}
 	
 	public void addNota(String texto, LocalDateTime horaAlarma, int numMinutos) throws NotaAlarmaException {
-		try {
-			listaDeNotas[numNotas] = new NotaAlarma(texto, horaAlarma, numMinutos);
-			this.numNotas++;
-		} catch (Exception e) {
-			System.out.println(e.getMessage());
-		}
 		listaDeNotas[numNotas] = new NotaAlarma(texto, horaAlarma, numMinutos);
 		this.numNotas++;
 	}
 	
-	public void borrarNota(int posicion) {
-		this.numNotas --;
 	public void borrarNota(int posicion) throws BlocException {
 		if (posicion > Bloc.NUMERONOTASMAXIMA || listaDeNotas[posicion] == null) {
 			throw new BlocException("Error. La posicion que quiere borrar no existe.");
