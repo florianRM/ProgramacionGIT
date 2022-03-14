@@ -24,13 +24,18 @@ public class Main {
 				tipoBloc = tipoBloc();
 				if (tipoBloc == 1) {
 					texto = textoNota();
-					nuevoBloc.addNota(texto);
+					try {
+						nuevoBloc.addNota(texto);
+					} catch (BlocException e) {
+						// TODO Auto-generated catch block
+						System.out.println(e.getMessage());
+					}
 				}
 				else if (tipoBloc == 2) {
 					texto = textoNota();
 					try {
 						nuevoBloc.addNota(texto, pedirFecha(), estadoAlarma());
-					} catch (NotaAlarmaException e) {
+					} catch (Exception e) {
 						// TODO Auto-generated catch block
 						System.out.println(e.getMessage());
 					}
@@ -42,7 +47,7 @@ public class Main {
 					min = pedirInteger();
 					try {
 						nuevoBloc.addNota(texto, fecha, min);
-					} catch (NotaAlarmaException e) {
+					} catch (Exception e) {
 						System.out.println(e.getMessage());
 					}
 				}

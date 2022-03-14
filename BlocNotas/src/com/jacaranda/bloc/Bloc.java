@@ -17,17 +17,26 @@ public class Bloc {
 		this.nombre = nombre;
 	}
 	
-	public void addNota(String texto) {
+	public void addNota(String texto) throws BlocException {
+		if (numNotas == Bloc.NUMERONOTASMAXIMA) {
+			throw new BlocException("El bloc está completo.");
+		}
 		listaDeNotas[numNotas] = new Nota(texto);
 		this.numNotas ++;
 	}
 	
-	public void addNota(String texto, LocalDateTime horaAlarma, boolean estado) throws NotaAlarmaException {
+	public void addNota(String texto, LocalDateTime horaAlarma, boolean estado) throws NotaAlarmaException, BlocException {
+		if (numNotas == Bloc.NUMERONOTASMAXIMA) {
+			throw new BlocException("El bloc está completo.");
+		}
 		listaDeNotas[numNotas] = new NotaAlarma(texto, horaAlarma, estado);
 		this.numNotas ++;
 	}
 	
-	public void addNota(String texto, LocalDateTime horaAlarma, int numMinutos) throws NotaAlarmaException {
+	public void addNota(String texto, LocalDateTime horaAlarma, int numMinutos) throws NotaAlarmaException, BlocException {
+		if (numNotas == Bloc.NUMERONOTASMAXIMA) {
+			throw new BlocException("El bloc está completo.");
+		}
 		listaDeNotas[numNotas] = new NotaAlarma(texto, horaAlarma, numMinutos);
 		this.numNotas++;
 	}
@@ -36,8 +45,13 @@ public class Bloc {
 		if (posicion > Bloc.NUMERONOTASMAXIMA || listaDeNotas[posicion] == null) {
 			throw new BlocException("Error. La posicion que quiere borrar no existe.");
 		}
-		for (int i=posicion; i < numNotas; i++) {
-			listaDeNotas[i] = listaDeNotas[i+1];
+		if (posicion == Bloc.NUMERONOTASMAXIMA) {
+			listaDeNotas[posicion] = null;
+		}
+		else {
+			for (int i=posicion; i < numNotas; i++) {
+				listaDeNotas[i] = listaDeNotas[i+1];
+			}
 		}
 		this.numNotas --;
 	}
