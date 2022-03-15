@@ -132,10 +132,12 @@ public class Main {
 					System.out.println(((LibroFisico) libros[posicion1]).masCaroLibroFisico((LibroDigital)libros[posicion2]));
 				}
 				break;
+			case 5:
+				System.out.println("Saliendo");
 			default:
+				System.out.println("La opción introducida es incorrecta.");
 				break;
 			}
-			
 		} while (opc != 5);
 	}
 	
