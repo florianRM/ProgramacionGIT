@@ -97,6 +97,8 @@ public class Provincia {
 			Pueblo p = resultado.next();
 			if (p.getNombre().equalsIgnoreCase(pueblo)) {
 				this.pueblos.remove(p);
+				this.numeroHabitantes -= p.getNumeroHabitantes();
+				this.superficie -= p.getSuperficie();
 				encontrado = true;
 			}
 		}
@@ -148,6 +150,15 @@ public class Provincia {
 			}
 		}
 		this.numeroHabitantes += numeroHabitantes; 
+	}
+	
+	public int numPueblos() {
+		int contador = 0;
+		for (Iterator<Pueblo> iterator = pueblos.iterator(); iterator.hasNext();) {
+			Pueblo pueblo = iterator.next();
+			contador++;
+		}
+		return contador;
 	}
 	
 	public double getRentaPerCapita() {

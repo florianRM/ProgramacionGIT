@@ -49,12 +49,14 @@ public class Main {
 		
 		//Creacion de pueblos
 		try {
-			p.addPueblo("Brenes", "12345", 10000, 200000, 200);
+			p.addPueblo("Brenes", "345", 10000, 200000, 200);
 			System.out.println("Pueblo creado");
-			p.addPueblo("Brenes", "12345", 10000, 200000, 200);
+			p.addPueblo("Brene", "215", 10000, 200000, 200);
 		} catch (ProvinciaException e) {
 			System.out.println(e.getMessage());
 		}
+		
+		System.out.println(p.numPueblos());
 		
 		//Exceptions
 		//Renta per capita negativa

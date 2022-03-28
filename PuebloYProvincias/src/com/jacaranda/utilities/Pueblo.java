@@ -32,8 +32,8 @@ public class Pueblo implements Comparable<Pueblo> {
 				contador ++;
 			}
 		}
-		if (longitud != 7 || contador != longitud) {
-			throw new PuebloException("El código no es correcto. Debe tener 5 carácteres numéricos.");
+		if (longitud != 5 || contador != longitud) {
+			throw new PuebloException("El código no es correcto. Debe tener 3 carácteres numéricos.");
 		}
 		this.codigo = codigo;
 	}
