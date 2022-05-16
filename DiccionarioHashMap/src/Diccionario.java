@@ -1,6 +1,7 @@
 
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Iterator;
 
 public class Diccionario {
 	
@@ -46,6 +47,10 @@ public class Diccionario {
 			throw new DiccionarioException("La palabra buscada no existe.");
 		}
 		return resultado;
+	}
+	
+	public String buscarPalabrasEmpiezen(char inicial) {
+		return this.listaDePalabras.values().toString();
 	}
 	
 	@Override

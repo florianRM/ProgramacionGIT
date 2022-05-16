@@ -5,16 +5,15 @@ public class Main {
 		
 		Diccionario d = new Diccionario();
 		
-		d.addDiccionario("Avión", "Método de transporte");
+		d.addDiccionario("Avion", "Metodo de transporte");
 		d.addDiccionario("Ave", "Animal que vuela");
 		d.addDiccionario("Banco", "Grupo de peces");
 		d.addDiccionario("Banco", "Lugar donde se presta dinero");
-		d.addDiccionario("Barco", "Método de transporte por agua");
-		d.removePalabra("Barco");
-		d.removePalabra("Banco");
+		d.addDiccionario("Barco", "Metodo de transporte por agua");
 		
 		System.out.println(d.toString());
-		System.out.println(d.buscarSignificado("Avión"));
+		System.out.println(d.buscarSignificado("Avion"));
+		System.out.println(d.buscarPalabrasEmpiezen('r'));
 	}
 
 }

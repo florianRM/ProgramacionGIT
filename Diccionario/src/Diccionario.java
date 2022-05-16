@@ -27,10 +27,9 @@ public class Diccionario {
 				encontrado = true;
 			}
 		}
-
 		return encontrado;
 	}
-
+	
 	public boolean borrarPalabra(String palabra) throws DiccionarioException {
 		boolean encontrado = false;
 		for (Iterator<PalabrasEmpiezan> iterator = diccionario.iterator(); iterator.hasNext() && !encontrado;) {
@@ -40,6 +39,10 @@ public class Diccionario {
 			}
 		}
 		return encontrado;
+	}
+	
+	public String buscarSignificado(String palabra) {
+		return this.diccionario.get(0).toString();
 	}
 
 	@Override
