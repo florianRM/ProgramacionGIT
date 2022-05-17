@@ -49,8 +49,14 @@ public class Diccionario {
 		return resultado;
 	}
 	
-	public String buscarPalabrasEmpiezen(char inicial) {
-		return this.listaDePalabras.values().toString();
+	public String buscarPalabrasEmpiezen(String inicial) {
+		StringBuilder resultado = new StringBuilder();
+		for(String aux : this.listaDePalabras.keySet()) {
+			if(inicial.charAt(0) == aux.charAt(0)) {
+				resultado.append(aux + this.listaDePalabras.get(aux) + "\n");
+			}
+		}
+		return resultado.toString();
 	}
 	
 	@Override

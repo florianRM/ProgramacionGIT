@@ -12,8 +12,7 @@ public class Main {
 		d.addDiccionario("Barco", "Metodo de transporte por agua");
 		
 		System.out.println(d.toString());
-		System.out.println(d.buscarSignificado("Avion"));
-		System.out.println(d.buscarPalabrasEmpiezen('r'));
+		System.out.println(d.buscarPalabrasEmpiezen("B"));
 	}
 
 }
