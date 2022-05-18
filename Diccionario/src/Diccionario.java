@@ -42,7 +42,9 @@ public class Diccionario {
 	}
 	
 	public String buscarSignificado(String palabra) {
-		return this.diccionario.get(0).toString();
+		PalabrasEmpiezan aux = new PalabrasEmpiezan(palabra.charAt(0));
+		
+		return this.diccionario.get(this.diccionario.indexOf(aux)).getSignificadoPalabra(palabra);
 	}
 
 	@Override
