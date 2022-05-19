@@ -33,6 +33,14 @@ public class Palabra {
 		this.significados.add(significado);
 	}
 	
+	public String getSignificado() {
+		String resultado = "";
+		for(String aux : this.significados) {
+			resultado += aux + "\n";
+		}
+		return resultado;
+	}
+	
 	public String getPalabra() {
 		return palabra;
 	}

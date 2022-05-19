@@ -10,7 +10,7 @@ public class Main {
 		d.addDiccionario("Ave", "animal");
 		d.addDiccionario("Barco", "Transporte");
 		
-		System.out.println(d.palabraEmpiezaPor('A'));
+		System.out.println(d.buscarSignificado("Avion"));
 	}
 
 }

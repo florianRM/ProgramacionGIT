@@ -46,6 +46,16 @@ public class PalabrasEmpiezan {
 		}
 		return encontrado;
 	}
+	
+	public String getSignificadoPalabra(String palabra) {
+		String resultado = "";
+		for(Palabra aux : this.palabras) {
+			if(aux.getPalabra().equalsIgnoreCase(palabra)) {
+				resultado = aux.getSignificado();
+			}
+		}
+		return resultado;
+	}
 
 	public char getLetra() {
 		return letra;

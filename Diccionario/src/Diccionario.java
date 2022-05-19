@@ -38,6 +38,7 @@ public class Diccionario {
 		return encontrado;
 	}
 	
+
 	public String palabraEmpiezaPor(char letra) {
 		StringBuilder resultado = new StringBuilder();
 		
@@ -47,6 +48,12 @@ public class Diccionario {
 			}
 		}
 		return resultado.toString();
+	}
+
+	public String buscarSignificado(String palabra) {
+		PalabrasEmpiezan aux = new PalabrasEmpiezan(palabra.charAt(0));
+		
+		return this.diccionario.get(this.diccionario.indexOf(aux)).getSignificadoPalabra(palabra);
 	}
 
 	@Override
