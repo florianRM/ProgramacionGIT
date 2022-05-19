@@ -53,7 +53,7 @@ public class PalabrasEmpiezan {
 
 	@Override
 	public String toString() {
-		return "\nLetra=" + letra + "\n"+ palabras;
+		return "Letra=" + letra + "\n"+ palabras;
 	}
 
 	@Override

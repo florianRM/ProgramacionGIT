@@ -9,8 +9,8 @@ public class Main {
 		d.addDiccionario("Avion", "Vuela por aire");
 		d.addDiccionario("Ave", "animal");
 		d.addDiccionario("Barco", "Transporte");
-		d.borrarPalabra("Barco");
-		System.out.println(d.buscarSignificado("Avion"));
+		
+		System.out.println(d.palabraEmpiezaPor('A'));
 	}
 
 }
