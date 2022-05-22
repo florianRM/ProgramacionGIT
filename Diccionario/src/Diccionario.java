@@ -20,12 +20,9 @@ public class Diccionario {
 
 	public boolean addDiccionario(String palabra, String significado) throws DiccionarioException {
 		boolean encontrado = false;
-		for (Iterator<PalabrasEmpiezan> iterator = diccionario.iterator(); iterator.hasNext() && !encontrado;) {
-			PalabrasEmpiezan palabras = iterator.next();
-			if (palabra.charAt(0) == palabras.getLetra()) {
-				palabras.addPalabra(palabra, significado);
-				encontrado = true;
-			}
+		PalabrasEmpiezan aux = new PalabrasEmpiezan(palabra.charAt(0));
+		if((!palabra.isEmpty() && palabra != null) && (!significado.isEmpty() && significado != null)) {
+			this.diccionario.get(this.diccionario.indexOf(aux)).addPalabra(palabra, significado);
 		}
 		return encontrado;
 	}
@@ -41,6 +38,18 @@ public class Diccionario {
 		return encontrado;
 	}
 	
+
+	public String palabraEmpiezaPor(char letra) {
+		StringBuilder resultado = new StringBuilder();
+		
+		for(PalabrasEmpiezan aux : this.diccionario) {
+			if(aux.getLetra() == letra) {
+				resultado.append(aux);
+			}
+		}
+		return resultado.toString();
+	}
+
 	public String buscarSignificado(String palabra) {
 		PalabrasEmpiezan aux = new PalabrasEmpiezan(palabra.charAt(0));
 		
