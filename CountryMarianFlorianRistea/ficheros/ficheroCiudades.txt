@@ -1,0 +1,818 @@
+Country name:Afghanistan
+City name:Kabul, address:1168 Najafabad Parkway
+
+Country name:Algeria
+City name:Batna, address:1924 Shimonoseki Drive
+City name:Bchar, address:1031 Daugavpils Parkway
+City name:Skikda, address:757 Rustenburg Avenue
+
+Country name:American Samoa
+City name:Tafuna, address:1892 Nabereznyje Telny Lane
+
+Country name:Angola
+City name:Benguela, address:
+City name:Namibe, address:368 Hunuco Boulevard
+
+Country name:Anguilla
+City name:South Hill, address:1368 Maracabo Boulevard
+
+Country name:Argentina
+City name:Avellaneda, address:
+City name:Ezeiza, address:
+City name:Quilmes, address:
+City name:Almirante Brown, address:1623 Kingstown Drive
+City name:Baha Blanca, address:1427 A Corua La Corua Place
+City name:Crdoba, address:96 Tafuna Way
+City name:Escobar, address:203 Tambaram Street
+City name:La Plata, address:1926 El Alto Avenue
+City name:Merlo, address:1532 Dzerzinsk Way
+City name:San Miguel de Tucumn, address:1483 Pathankot Street
+City name:Santa F, address:430 Kumbakonam Drive
+City name:Tandil, address:88 Nagaon Manor
+City name:Vicente Lpez, address:1244 Allappuzha Alleppey Place
+
+Country name:Armenia
+City name:Yerevan, address:42 Brindisi Place
+
+Country name:Australia
+City name:Woodridge, address:28 MySQL Boulevard, 1411 Lillydale Drive
+
+Country name:Austria
+City name:Graz, address:1010 Klerksdorp Way
+City name:Linz, address:1440 Compton Place
+City name:Salzburg, address:1587 Loja Manor
+
+Country name:Azerbaijan
+City name:Baku, address:431 Szkesfehrvr Avenue
+City name:Sumqayit, address:503 Sogamoso Loop
+
+Country name:Bahrain
+City name:al-Manama, address:
+
+Country name:Bangladesh
+City name:Dhaka, address:1838 Tabriz Lane
+City name:Jamalpur, address:1816 Bydgoszcz Loop
+City name:Tangail, address:262 A Corua La Corua Parkway
+
+Country name:Belarus
+City name:Mogiljov, address:
+City name:Molodetno, address:1027 Songkhla Manor
+
+Country name:Bolivia
+City name:El Alto, address:659 Gatineau Boulevard
+City name:Sucre, address:287 Cuautla Boulevard
+
+Country name:Brazil
+City name:Alvorada, address:
+City name:Juiz de Fora, address:
+City name:So Bernardo do Campo, address:
+City name:Angra dos Reis, address:1354 Siegen Street
+City name:Anpolis, address:356 Olomouc Manor
+City name:Aparecida de Goinia, address:1201 Qomsheh Manor
+City name:Araatuba, address:1692 Ede Loop
+City name:Bag, address:1190 0 Place
+City name:Belm, address:1163 London Parkway
+City name:Blumenau, address:1304 s-Hertogenbosch Way
+City name:Boa Vista, address:1293 Nam Dinh Way
+City name:Braslia, address:981 Kumbakonam Place
+City name:Goinia, address:984 Effon-Alaiye Avenue
+City name:Guaruj, address:259 Ipoh Drive
+City name:Ibirit, address:543 Bergamo Avenue
+City name:Juazeiro do Norte, address:686 Garland Manor
+City name:Luzinia, address:1839 Szkesfehrvr Parkway
+City name:Maring, address:829 Grand Prairie Way
+City name:Po, address:1666 Qomsheh Drive
+City name:Poos de Caldas, address:1338 Zalantun Lane
+City name:Rio Claro, address:1206 Dos Quebradas Place
+City name:Santa Brbara dOeste, address:1891 Rizhao Boulevard
+City name:Santo Andr, address:519 Nyeri Manor
+City name:So Leopoldo, address:614 Denizli Parkway
+City name:Sorocaba, address:1957 Yantai Lane
+City name:Vila Velha, address:306 Antofagasta Place
+City name:Vitria de Santo Anto, address:1133 Rizhao Avenue
+City name:guas Lindas de Gois, address:758 Junan Lane
+
+Country name:Brunei
+City name:Bandar Seri Begawan, address:1370 Le Mans Avenue
+
+Country name:Bulgaria
+City name:Ruse, address:
+City name:Stara Zagora, address:1229 Valencia Parkway
+
+Country name:Cambodia
+City name:Battambang, address:
+City name:Phnom Penh, address:754 Valencia Place
+
+Country name:Cameroon
+City name:Bamenda, address:1641 Changhwa Place
+City name:Yaound, address:114 Jalib al-Shuyukh Manor
+
+Country name:Canada
+City name:Gatineau, address:
+City name:London, address:
+City name:Halifax, address:1844 Usak Avenue
+City name:Oshawa, address:891 Novi Sad Manor
+City name:Richmond Hill, address:432 Garden Grove Street
+City name:Vancouver, address:983 Santa F Way
+City name:Lethbridge, address:47 MySakila Drive, 23 Workhaven Lane
+
+Country name:Chad
+City name:NDjamna, address:
+
+Country name:Chile
+City name:Coquimbo, address:
+City name:Antofagasta, address:1718 Valencia Street
+City name:Rancagua, address:1872 Toulon Loop
+
+Country name:China
+City name:Baicheng, address:
+City name:Baiyin, address:
+City name:Binzhou, address:
+City name:Haining, address:
+City name:Jining, address:
+City name:Jinzhou, address:
+City name:Leshan, address:
+City name:Rizhao, address:
+City name:Sanya, address:
+City name:Shaoguan, address:
+City name:Suihua, address:
+City name:Tieli, address:
+City name:Weifang, address:
+City name:Xintai, address:
+City name:Yinchuan, address:
+City name:Yingkou, address:
+City name:Zaoyang, address:
+City name:Zhoushan, address:
+City name:Changzhou, address:817 Bradford Loop
+City name:Datong, address:1158 Mandi Bahauddin Parkway
+City name:Daxian, address:1966 Amroha Avenue
+City name:Dongying, address:1322 Mosul Parkway
+City name:Emeishan, address:753 Ilorin Avenue
+City name:Enshi, address:804 Elista Drive
+City name:Ezhou, address:1774 Yaound Place
+City name:Fuyu, address:1333 Haldia Street
+City name:Fuzhou, address:1308 Sumy Loop
+City name:Hami, address:154 Tallahassee Loop
+City name:Hohhot, address:1587 Sullana Lane
+City name:Huaian, address:500 Lincoln Parkway
+City name:Jinchang, address:475 Atinsk Way
+City name:Junan, address:722 Bradford Lane
+City name:Korla, address:226 Halifax Street
+City name:Laiwu, address:1560 Jelets Boulevard
+City name:Laohekou, address:1557 Cape Coral Parkway
+City name:Lengshuijiang, address:1762 Paarl Parkway
+City name:Liaocheng, address:1854 Tieli Street
+City name:Meixian, address:1952 Chatsworth Drive
+City name:Nanyang, address:1440 Fukuyama Loop
+City name:Pingxiang, address:1294 Firozabad Drive
+City name:Qinhuangdao, address:1246 Boksburg Parkway
+City name:Shanwei, address:1269 Botosani Manor
+City name:Shenzhen, address:686 Donostia-San Sebastin Lane
+City name:Tianjin, address:1760 Oshawa Manor
+City name:Tiefa, address:1908 Gaziantep Place
+City name:Tongliao, address:105 Dzerzinsk Manor
+City name:Xiangfan, address:1103 Bilbays Parkway
+City name:Xiangtan, address:1586 Guaruj Place
+City name:Xinxiang, address:1909 Benguela Lane
+City name:Yantai, address:85 San Felipe de Puerto Plata Drive
+City name:Yuncheng, address:798 Cianjur Avenue
+City name:Yuzhou, address:867 Benin City Avenue
+City name:Zalantun, address:832 Nakhon Sawan Manor
+
+Country name:Colombia
+City name:Sogamoso, address:
+City name:Buenaventura, address:98 Stara Zagora Boulevard
+City name:Dos Quebradas, address:241 Mosul Lane
+City name:Florencia, address:734 Tanshui Avenue
+City name:Pereira, address:1410 Benin City Parkway
+City name:Sincelejo, address:1740 Portoviejo Avenue
+
+Country name:Congo
+City name:Lubumbashi, address:514 Ife Way
+City name:Mwene-Ditu, address:1519 Santiago de los Caballeros Loop
+
+Country name:Czech Republic
+City name:Olomouc, address:682 Halisahar Place
+
+Country name:Dominican Republic
+City name:La Romana, address:1245 Ibirit Way
+City name:San Felipe de Puerto Plata, address:437 Chungho Drive
+City name:Santiago de los Caballeros, address:532 Toulon Street
+
+Country name:Ecuador
+City name:Loja, address:
+City name:Robamba, address:
+City name:Portoviejo, address:816 Cayenne Parkway
+
+Country name:Egypt
+City name:Bilbays, address:
+City name:Mit Ghamr, address:
+City name:Idfu, address:1736 Cavite Place
+City name:Qalyub, address:765 Southampton Drive
+City name:Sawhaj, address:1727 Matamoros Place
+City name:Shubra al-Khayma, address:1987 Coacalco de Berriozbal Loop
+
+Country name:Estonia
+City name:Tartu, address:1289 Belm Boulevard
+
+Country name:Ethiopia
+City name:Addis Abeba, address:614 Pak Kret Street
+
+Country name:Faroe Islands
+City name:Trshavn, address:1359 Zhoushan Parkway
+
+Country name:Finland
+City name:Oulu, address:898 Jining Lane
+
+Country name:France
+City name:Brest, address:1346 Mysore Drive
+City name:Le Mans, address:1740 Le Mans Loop
+City name:Toulon, address:1386 Yangor Avenue
+City name:Toulouse, address:391 Callao Drive
+
+Country name:French Guiana
+City name:Cayenne, address:698 Otsu Street
+
+Country name:French Polynesia
+City name:Faaa, address:1447 Imus Way
+City name:Papeete, address:1668 Saint Louis Place
+
+Country name:Gambia
+City name:Banjul, address:
+
+Country name:Germany
+City name:Duisburg, address:442 Rae Bareli Place
+City name:Erlangen, address:319 Springs Loop
+City name:Halle/Saale, address:1966 Tonghae Street
+City name:Mannheim, address:1074 Binzhou Manor
+City name:Saarbrcken, address:430 Alessandria Loop
+City name:Siegen, address:1792 Valle de la Pascua Place
+City name:Witten, address:68 Molodetno Manor
+
+Country name:Greece
+City name:Patras, address:
+City name:Athenai, address:692 Joliet Street
+
+Country name:Greenland
+City name:Nuuk, address:850 Salala Loop
+
+Country name:Holy See Vatican City State
+City name:Citt del Vaticano, address:18 Duisburg Boulevard
+
+Country name:Hong Kong
+City name:Kowloon and New Kowloon, address:1912 Allende Manor
+
+Country name:Hungary
+City name:Szkesfehrvr, address:
+
+Country name:India
+City name:Amroha, address:
+City name:Bhimavaram, address:
+City name:Chapra, address:
+City name:Kanchrapara, address:
+City name:Rajkot, address:
+City name:Siliguri Shiliguri, address:
+City name:Vijayawada, address:
+City name:Adoni, address:230 Urawa Drive
+City name:Ahmadnagar, address:922 Vila Velha Loop
+City name:Allappuzha Alleppey, address:431 Xiangtan Avenue
+City name:Ambattur, address:1014 Loja Manor
+City name:Balurghat, address:624 Oshawa Boulevard
+City name:Berhampore Baharampur, address:126 Acua Parkway
+City name:Bhavnagar, address:97 Mogiljov Lane
+City name:Bhilwara, address:43 Dadu Avenue
+City name:Bhopal, address:419 Iligan Lane
+City name:Bhusawal, address:642 Nador Drive
+City name:Bijapur, address:1257 Guadalajara Street
+City name:Chandrapur, address:1540 Wroclaw Drive
+City name:Dhule Dhulia, address:495 Bhimavaram Lane
+City name:Etawah, address:211 Chiayi Drive
+City name:Firozabad, address:9 San Miguel de Tucumn Manor
+City name:Gandhinagar, address:1967 Sincelejo Place
+City name:Gulbarga, address:1049 Matamoros Parkway
+City name:Haldia, address:435 0 Way
+City name:Halisahar, address:1027 Banjul Place
+City name:Hoshiarpur, address:791 Salinas Street
+City name:Hubli-Dharwad, address:788 Atinsk Street
+City name:Jaipur, address:81 Hodeida Way
+City name:Jhansi, address:176 Mandaluyong Place
+City name:Jodhpur, address:60 Poos de Caldas Street
+City name:Kamarhati, address:33 Gorontalo Way
+City name:Karnal, address:1884 Shikarpur Avenue
+City name:Katihar, address:1948 Bayugan Parkway
+City name:Kumbakonam, address:1675 Xiangfan Manor
+City name:Miraj, address:651 Pathankot Loop
+City name:Munger Monghyr, address:1425 Shikarpur Manor
+City name:Mysore, address:1213 Ranchi Parkway
+City name:Nagaon, address:1963 Moscow Place
+City name:Palghat Palakkad, address:1519 Ilorin Place
+City name:Parbhani, address:41 El Alto Parkway
+City name:Pathankot, address:1697 Tanauan Lane
+City name:Patiala, address:951 Stara Zagora Manor
+City name:Pudukkottai, address:1661 Abha Drive
+City name:Pune, address:943 Johannesburg Avenue
+City name:Purnea Purnia, address:1596 Acua Parkway
+City name:Rae Bareli, address:936 Salzburg Lane
+City name:Rampur, address:1920 Weifang Avenue
+City name:Ranchi, address:604 Bern Place
+City name:Sambhal, address:866 Shivapuri Manor
+City name:Satna, address:45 Aparecida de Goinia Place
+City name:Shimoga, address:1964 Gijn Manor
+City name:Shivapuri, address:57 Arlington Manor
+City name:Tambaram, address:1993 Tabuk Lane
+City name:Udaipur, address:1877 Ezhou Lane
+City name:Uluberia, address:1704 Tambaram Manor
+City name:Uttarpara-Kotrung, address:954 Kimchon Place
+City name:Valparai, address:990 Etawah Loop
+City name:Varanasi Benares, address:117 Boa Vista Way
+City name:Yamuna Nagar, address:808 Bhopal Manor
+
+Country name:Indonesia
+City name:Lhokseumawe, address:
+City name:Madiun, address:
+City name:Pangkal Pinang, address:
+City name:Pontianak, address:
+City name:Purwakarta, address:
+City name:Cianjur, address:1445 Carmen Parkway
+City name:Ciomas, address:47 Syktyvkar Lane
+City name:Ciparay, address:1860 Taguig Loop
+City name:Gorontalo, address:1688 Nador Lane
+City name:Jakarta, address:456 Escobar Way
+City name:Pemalang, address:544 Malm Parkway
+City name:Probolinggo, address:154 Oshawa Manor
+City name:Surakarta, address:1947 Paarl Way
+City name:Tegal, address:935 Aden Boulevard
+
+Country name:Iran
+City name:Arak, address:334 Munger Monghyr Lane
+City name:Esfahan, address:1531 Sal Drive
+City name:Kermanshah, address:220 Hidalgo Drive
+City name:Najafabad, address:1922 Miraj Way
+City name:Qomsheh, address:76 Kermanshah Manor
+City name:Shahr-e Kord, address:927 Barcelona Street
+City name:Sirjan, address:956 Nam Dinh Manor
+City name:Tabriz, address:600 Bradford Street
+
+Country name:Iraq
+City name:Mosul, address:
+
+Country name:Israel
+City name:Ashqelon, address:
+City name:Ashdod, address:659 Vaduz Drive
+City name:Bat Yam, address:1542 Lubumbashi Boulevard
+City name:Tel Aviv-Jaffa, address:97 Shimoga Avenue
+
+Country name:Italy
+City name:Brindisi, address:
+City name:Livorno, address:
+City name:Udine, address:
+City name:Alessandria, address:127 Purnea Purnia Manor
+City name:Bergamo, address:231 Kaliningrad Place
+City name:Brescia, address:1224 Huejutla de Reyes Boulevard
+City name:Syrakusa, address:1926 Gingoog Street
+
+Country name:Japan
+City name:Akishima, address:
+City name:Isesaki, address:
+City name:Kanazawa, address:
+City name:Kuwana, address:
+City name:Okayama, address:
+City name:Ueda, address:
+City name:Fukuyama, address:928 Jaffna Loop
+City name:Higashiosaka, address:446 Kirovo-Tepetsk Lane
+City name:Hino, address:345 Oshawa Boulevard
+City name:Hiroshima, address:1635 Kuwana Boulevard
+City name:Iwaki, address:1148 Saarbrcken Parkway
+City name:Iwakuni, address:1964 Allappuzha Alleppey Street
+City name:Iwatsuki, address:168 Cianjur Manor
+City name:Izumisano, address:767 Pyongyang Drive
+City name:Kakamigahara, address:1287 Xiangfan Boulevard
+City name:Kamakura, address:586 Tete Way
+City name:Koriyama, address:454 Patiala Lane
+City name:Kurashiki, address:61 Tama Street
+City name:Matsue, address:619 Hunuco Avenue
+City name:Miyakonojo, address:752 Ondo Loop
+City name:Nagareyama, address:17 Kabul Boulevard
+City name:Okinawa, address:1565 Tangail Manor
+City name:Omiya, address:1266 Laredo Parkway
+City name:Onomichi, address:124 al-Manama Way
+City name:Otsu, address:1336 Benin City Drive
+City name:Sagamihara, address:1542 Tarlac Parkway
+City name:Sasebo, address:1913 Hanoi Way
+City name:Shimonoseki, address:786 Aurora Avenue
+City name:Tama, address:102 Chapra Drive
+City name:Tsuyama, address:1404 Taguig Drive
+City name:Urawa, address:1337 Lincoln Parkway
+
+Country name:Kazakstan
+City name:Zhezqazghan, address:
+City name:Pavlodar, address:602 Paarl Street
+
+Country name:Kenya
+City name:Kisumu, address:447 Surakarta Loop
+City name:Nyeri, address:1658 Jastrzebie-Zdrj Loop
+
+Country name:Kuwait
+City name:Jalib al-Shuyukh, address:346 Skikda Parkway
+
+Country name:Latvia
+City name:Daugavpils, address:1673 Tangail Drive
+City name:Liepaja, address:1780 Hino Boulevard
+
+Country name:Liechtenstein
+City name:Vaduz, address:943 Tokat Street
+
+Country name:Lithuania
+City name:Vilnius, address:
+
+Country name:Madagascar
+City name:Mahajanga, address:320 Baiyin Parkway
+
+Country name:Malawi
+City name:Lilongwe, address:710 San Felipe del Progreso Avenue
+
+Country name:Malaysia
+City name:Ipoh, address:316 Uruapan Street
+City name:Kuching, address:1114 Liepaja Street
+City name:Sungai Petani, address:715 So Bernardo do Campo Lane
+
+Country name:Mexico
+City name:Acua, address:
+City name:Carmen, address:
+City name:Celaya, address:
+City name:Coatzacoalcos, address:
+City name:Cuernavaca, address:
+City name:Huejutla de Reyes, address:
+City name:Jos Azueta, address:
+City name:La Paz, address:
+City name:Monclova, address:
+City name:Allende, address:397 Sunnyvale Avenue
+City name:Atlixco, address:125 Citt del Vaticano Boulevard
+City name:Coacalco de Berriozbal, address:1473 Changhwa Parkway
+City name:Cuauhtmoc, address:1447 Chatsworth Place
+City name:Cuautla, address:479 San Felipe del Progreso Avenue
+City name:El Fuerte, address:814 Simferopol Loop
+City name:Guadalajara, address:817 Laredo Avenue
+City name:Hidalgo, address:781 Shimonoseki Drive
+City name:Huixquilucan, address:1002 Ahmadnagar Manor
+City name:Jurez, address:433 Florencia Street
+City name:Matamoros, address:146 Johannesburg Way
+City name:Mexicali, address:785 Vaduz Street
+City name:Nezahualcyotl, address:1107 Nakhon Sawan Avenue
+City name:Pachuca de Soto, address:1698 Southport Loop
+City name:Salamanca, address:144 South Hill Loop
+City name:San Felipe del Progreso, address:1145 Vilnius Manor
+City name:San Juan Bautista Tuxtepec, address:355 Vitria de Santo Anto Way
+City name:Torren, address:261 Saint Louis Way
+City name:Uruapan, address:251 Florencia Drive
+City name:Valle de Santiago, address:86 Higashiosaka Lane
+City name:Zapopan, address:1088 Ibirit Place
+
+Country name:Moldova
+City name:Chisinau, address:269 Cam Ranh Parkway
+
+Country name:Morocco
+City name:Beni-Mellal, address:
+City name:Nador, address:671 Graz Street
+City name:Sal, address:28 Charlotte Amalie Street
+
+Country name:Mozambique
+City name:Beira, address:771 Yaound Manor
+City name:Naala-Porto, address:596 Huixquilucan Place
+City name:Tete, address:1599 Plock Drive
+
+Country name:Myanmar
+City name:Monywa, address:51 Laredo Avenue
+City name:Myingyan, address:1566 Inegl Manor
+
+Country name:Nauru
+City name:Yangor, address:
+
+Country name:Nepal
+City name:Birgunj, address:470 Boksburg Street
+
+Country name:Netherlands
+City name:Emmen, address:
+City name:Amersfoort, address:992 Klerksdorp Loop
+City name:Apeldoorn, address:1749 Daxian Place
+City name:Ede, address:1217 Konotop Avenue
+City name:s-Hertogenbosch, address:741 Ambattur Manor
+
+Country name:New Zealand
+City name:Hamilton, address:478 Joliet Way
+
+Country name:Nigeria
+City name:Sokoto, address:
+City name:Benin City, address:1279 Udine Parkway
+City name:Deba Habe, address:1936 Lapu-Lapu Parkway
+City name:Effon-Alaiye, address:1155 Liaocheng Place
+City name:Ife, address:1888 Kabul Drive
+City name:Ikerre, address:955 Bamenda Way
+City name:Ilorin, address:1177 Jelets Way
+City name:Kaduna, address:320 Brest Avenue
+City name:Ogbomosho, address:556 Baybay Manor
+City name:Ondo, address:1367 Yantai Manor
+City name:Owo, address:1006 Santa Brbara dOeste Manor
+City name:Oyo, address:786 Stara Zagora Way
+City name:Zaria, address:885 Yingkou Manor
+
+Country name:North Korea
+City name:Pyongyang, address:1386 Nakhon Sawan Boulevard
+
+Country name:Oman
+City name:Salala, address:
+City name:Masqat, address:613 Korolev Drive
+
+Country name:Pakistan
+City name:Dadu, address:966 Arecibo Loop
+City name:Mandi Bahauddin, address:1820 Maring Parkway
+City name:Mardan, address:1688 Okara Way
+City name:Okara, address:734 Bchar Place
+City name:Shikarpur, address:934 San Felipe de Puerto Plata Street
+
+Country name:Paraguay
+City name:Asuncin, address:201 Effon-Alaiye Way
+City name:Ciudad del Este, address:1679 Antofagasta Street
+City name:San Lorenzo, address:1628 Nagareyama Lane
+
+Country name:Peru
+City name:Hunuco, address:
+City name:Sullana, address:
+City name:Callao, address:827 Yuncheng Drive
+City name:Lima, address:1175 Tanauan Way
+
+Country name:Philippines
+City name:Iligan, address:
+City name:Santa Rosa, address:
+City name:Talavera, address:
+City name:Tarlac, address:
+City name:Baybay, address:492 Cam Ranh Street
+City name:Bayugan, address:1166 Changhwa Street
+City name:Bislig, address:152 Kitwe Parkway
+City name:Cabuyao, address:1061 Ede Avenue
+City name:Cavite, address:717 Changzhou Lane
+City name:Davao, address:217 Botshabelo Place
+City name:Gingoog, address:118 Jaffna Loop
+City name:Hagonoy, address:127 Iwakuni Boulevard
+City name:Imus, address:953 Hodeida Street
+City name:Lapu-Lapu, address:582 Papeete Loop
+City name:Mandaluyong, address:1831 Nam Dinh Loop
+City name:Ozamis, address:1351 Aparecida de Goinia Parkway
+City name:Taguig, address:89 Allappuzha Alleppey Manor
+City name:Tanauan, address:1191 Tandil Drive
+City name:Tanza, address:1479 Rustenburg Boulevard
+City name:Tuguegarao, address:862 Xintai Lane
+
+Country name:Poland
+City name:Czestochowa, address:
+City name:Lublin, address:
+City name:Plock, address:
+City name:Wroclaw, address:
+City name:Bydgoszcz, address:1769 Iwaki Lane
+City name:Jastrzebie-Zdrj, address:1050 Garden Grove Avenue
+City name:Kalisz, address:906 Goinia Way
+City name:Tychy, address:1642 Charlotte Amalie Drive
+
+Country name:Puerto Rico
+City name:Arecibo, address:1009 Zanzibar Lane
+City name:Ponce, address:1405 Chisinau Place
+
+Country name:Romania
+City name:Bucuresti, address:
+City name:Botosani, address:1256 Bislig Boulevard
+
+Country name:Runion
+City name:Saint-Denis, address:1952 Pune Lane
+
+Country name:Russian Federation
+City name:Kamyin, address:
+City name:Pjatigorsk, address:
+City name:Serpuhov, address:
+City name:Atinsk, address:616 Hagonoy Avenue
+City name:Balaiha, address:1697 Kowloon and New Kowloon Loop
+City name:Dzerzinsk, address:740 Udaipur Lane
+City name:Elista, address:270 Toulon Boulevard
+City name:Ivanovo, address:1867 San Juan Bautista Tuxtepec Avenue
+City name:Jaroslavl, address:810 Palghat Palakkad Boulevard
+City name:Jelets, address:1913 Kamakura Place
+City name:Kaliningrad, address:1883 Maikop Lane
+City name:Kirovo-Tepetsk, address:1089 Iwatsuki Avenue
+City name:Kolpino, address:661 Chisinau Lane
+City name:Korolev, address:954 Lapu-Lapu Way
+City name:Kurgan, address:1618 Olomouc Manor
+City name:Kursk, address:746 Joliet Lane
+City name:Lipetsk, address:1998 Halifax Drive
+City name:Ljubertsy, address:1623 Baha Blanca Manor
+City name:Maikop, address:1157 Nyeri Loop
+City name:Moscow, address:46 Pjatigorsk Lane
+City name:Nabereznyje Telny, address:207 Cuernavaca Loop
+City name:Niznekamsk, address:909 Garland Manor
+City name:Novoterkassk, address:1077 San Felipe de Puerto Plata Place
+City name:Smolensk, address:801 Hagonoy Drive
+City name:Syktyvkar, address:1823 Hoshiarpur Lane
+City name:Teboksary, address:469 Nakhon Sawan Street
+City name:Usolje-Sibirskoje, address:1621 Tongliao Avenue
+City name:Zeleznogorsk, address:1378 Beira Loop
+
+Country name:Saint Vincent and the Grenadines
+City name:Kingstown, address:1016 Iwakuni Street
+
+Country name:Saudi Arabia
+City name:Abha, address:733 Mandaluyong Place
+City name:Jedda, address:725 Isesaki Place
+City name:Tabuk, address:780 Kimberley Way
+City name:al-Hawiya, address:1124 Buenaventura Drive
+City name:al-Qatif, address:289 Santo Andr Manor
+
+Country name:Senegal
+City name:Ziguinchor, address:1889 Valparai Way
+
+Country name:Slovakia
+City name:Bratislava, address:482 Kowloon and New Kowloon Manor
+
+Country name:South Africa
+City name:Chatsworth, address:
+City name:Boksburg, address:569 Baicheng Lane
+City name:Botshabelo, address:898 Belm Manor
+City name:Johannesburg, address:270 Tambaram Parkway
+City name:Kimberley, address:1417 Lancaster Avenue
+City name:Klerksdorp, address:682 Junan Way
+City name:Newcastle, address:1766 Almirante Brown Street
+City name:Paarl, address:1443 Mardan Street
+City name:Rustenburg, address:1639 Saarbrcken Drive
+City name:Soshanguve, address:999 Sanaa Loop
+City name:Springs, address:929 Tallahassee Loop
+
+Country name:South Korea
+City name:Tonghae, address:
+City name:Cheju, address:1942 Ciparay Parkway
+City name:Kimchon, address:588 Vila Velha Manor
+City name:Naju, address:647 A Corua La Corua Street
+City name:Uijongbu, address:300 Junan Street
+
+Country name:Spain
+City name:Santiago de Compostela, address:
+City name:A Corua La Corua, address:939 Probolinggo Loop
+City name:Donostia-San Sebastin, address:44 Najafabad Way
+City name:Gijn, address:331 Bydgoszcz Parkway
+City name:Ourense Orense, address:1469 Plock Lane
+
+Country name:Sri Lanka
+City name:Jaffna, address:692 Amroha Drive
+
+Country name:Sudan
+City name:Omdurman, address:115 Hidalgo Parkway
+City name:al-Qadarif, address:1152 Citrus Heights Manor
+
+Country name:Sweden
+City name:Malm, address:1150 Kimchon Manor
+
+Country name:Switzerland
+City name:Lausanne, address:
+City name:Basel, address:915 Ponce Place
+City name:Bern, address:185 Novi Sad Place
+
+Country name:Taiwan
+City name:Chungho, address:
+City name:Fengshan, address:
+City name:Tanshui, address:
+City name:Tsaotun, address:
+City name:Changhwa, address:1551 Rampur Lane
+City name:Chiayi, address:1947 Poos de Caldas Boulevard
+City name:Hsichuh, address:381 Kabul Way
+City name:Lungtan, address:1668 Anpolis Street
+City name:Nantou, address:53 Idfu Parkway
+City name:Touliu, address:1029 Dzerzinsk Manor
+
+Country name:Tanzania
+City name:Mwanza, address:
+City name:Tabora, address:605 Rio Claro Parkway
+City name:Zanzibar, address:1842 Luzinia Boulevard
+
+Country name:Thailand
+City name:Nakhon Sawan, address:1337 Mit Ghamr Avenue
+City name:Pak Kret, address:1632 Bislig Avenue
+City name:Songkhla, address:870 Ashqelon Loop
+
+Country name:Tonga
+City name:Nukualofa, address:1516 Escobar Drive
+
+Country name:Tunisia
+City name:Sousse, address:507 Smolensk Loop
+
+Country name:Turkey
+City name:Denizli, address:
+City name:Eskisehir, address:
+City name:Gaziantep, address:
+City name:Sivas, address:
+City name:Sultanbeyli, address:
+City name:Tokat, address:
+City name:Adana, address:663 Baha Blanca Parkway
+City name:Balikesir, address:1912 Emeishan Drive
+City name:Batman, address:29 Pyongyang Loop
+City name:Inegl, address:457 Tongliao Loop
+City name:Kilis, address:374 Bat Yam Boulevard
+City name:Ktahya, address:848 Tafuna Manor
+City name:Osmaniye, address:270 Amroha Parkway
+City name:Tarsus, address:842 Salzburg Lane
+City name:Usak, address:1215 Pyongyang Parkway
+
+Country name:Turkmenistan
+City name:Ashgabat, address:387 Mwene-Ditu Drive
+
+Country name:Tuvalu
+City name:Funafuti, address:454 Nakhon Sawan Boulevard
+
+Country name:Ukraine
+City name:Konotop, address:
+City name:ostka, address:
+City name:Kamjanets-Podilskyi, address:1793 Meixian Place
+City name:Mukateve, address:1752 So Leopoldo Parkway
+City name:Simferopol, address:927 Baha Blanca Parkway
+City name:Sumy, address:140 Chiayi Parkway
+
+Country name:United Arab Emirates
+City name:Abu Dhabi, address:535 Ahmadnagar Manor
+City name:Sharja, address:1192 Tongliao Street
+City name:al-Ayn, address:669 Firozabad Loop
+
+Country name:United Kingdom
+City name:Southampton, address:
+City name:Southport, address:
+City name:Stockport, address:
+City name:York, address:
+City name:Bradford, address:1557 Ktahya Boulevard
+City name:Dundee, address:483 Ljubertsy Parkway
+City name:London, address:1497 Yuzhou Drive
+City name:Southend-on-Sea, address:360 Toulouse Parkway
+
+Country name:United States
+City name:Akron, address:
+City name:Cape Coral, address:
+City name:Garden Grove, address:
+City name:Garland, address:
+City name:Joliet, address:
+City name:Arlington, address:913 Coacalco de Berriozbal Loop
+City name:Augusta-Richmond County, address:1308 Arecibo Way
+City name:Aurora, address:587 Benguela Manor
+City name:Bellevue, address:660 Jedda Boulevard
+City name:Brockton, address:782 Mosul Street
+City name:Citrus Heights, address:770 Bydgoszcz Avenue
+City name:Clarksville, address:1666 Beni-Mellal Place
+City name:Compton, address:533 al-Ayn Boulevard
+City name:Dallas, address:530 Lausanne Lane
+City name:Dayton, address:32 Pudukkottai Lane
+City name:El Monte, address:1866 al-Qatif Avenue
+City name:Fontana, address:1135 Izumisano Parkway
+City name:Grand Prairie, address:333 Goinia Way
+City name:Greensboro, address:369 Papeete Way
+City name:Kansas City, address:1191 Sungai Petani Boulevard
+City name:Lancaster, address:793 Cam Ranh Avenue
+City name:Laredo, address:1795 Santiago de Compostela Way
+City name:Lincoln, address:1214 Hanoi Way
+City name:Manchester, address:401 Sucre Boulevard
+City name:Memphis, address:682 Garden Grove Place
+City name:Peoria, address:1980 Kamjanets-Podilskyi Street
+City name:Roanoke, address:1936 Cuman Avenue
+City name:Rockford, address:1485 Bratislava Place
+City name:Saint Louis, address:1717 Guadalajara Lane
+City name:Salinas, address:920 Kumbakonam Loop
+City name:San Bernardino, address:1121 Loja Avenue
+City name:Sterling Heights, address:879 Newcastle Way
+City name:Sunnyvale, address:226 Brest Manor
+City name:Tallahassee, address:1309 Weifang Street
+City name:Warren, address:1944 Bamenda Way
+
+Country name:Venezuela
+City name:Barcelona, address:
+City name:Valencia, address:
+City name:Caracas, address:1378 Alvorada Avenue
+City name:Cuman, address:1079 Tel Aviv-Jaffa Boulevard
+City name:Maracabo, address:138 Caracas Boulevard
+City name:Ocumare del Tuy, address:1848 Salala Boulevard
+City name:Valle de la Pascua, address:544 Tarsus Boulevard
+
+Country name:Vietnam
+City name:Cam Ranh, address:
+City name:Nha Trang, address:
+City name:Vinh, address:
+City name:Haiphong, address:1149 A Corua La Corua Boulevard
+City name:Hanoi, address:68 Ponce Parkway
+City name:Nam Dinh, address:1786 Salinas Place
+
+Country name:Virgin Islands
+City name:Charlotte Amalie, address:264 Bhimavaram Manor
+
+Country name:Yemen
+City name:Aden, address:751 Lima Loop
+City name:Hodeida, address:434 Ourense Orense Manor
+City name:Sanaa, address:687 Alessandria Parkway
+City name:Taizz, address:1001 Miyakonojo Lane
+
+Country name:Yugoslavia
+City name:Novi Sad, address:
+City name:Kragujevac, address:900 Santiago de Compostela Parkway
+
+Country name:Zambia
+City name:Kitwe, address:1836 Korla Parkway
+

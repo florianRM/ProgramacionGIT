@@ -1,12 +1,9 @@
 package com.jacaranda.country;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Objects;
 
-public class City {
+public class City implements Comparable<City> {
 	private int cityId;
 	private String cityName;
 	private ArrayList<Address> listAddress;
@@ -15,7 +12,10 @@ public class City {
 		this.cityId = cityId;
 		this.cityName = cityName;
 		this.listAddress = new ArrayList<>();
-		leerFicheroAddress("ficheros/address2.txt");
+	}
+	
+	public void addAddress(Address calle) {
+		this.listAddress.add(calle);
 	}
 	
 	public int getCityId() {
@@ -25,30 +25,52 @@ public class City {
 	public String getCityName() {
 		return cityName;
 	}
+	
+	public int getAddressNum() {
+		return this.listAddress.size();
+	}
+	
+	public String writeAddressFile() {
+		StringBuilder text = new StringBuilder();
+		
+		for(Address aux : this.listAddress) {
+			if(text.length() != 0) {
+				text.append(", " + aux.getAddress());
+			} else {
+				text.append(aux.getAddress());
+			}
+		}
+		return "City name:" + this.cityName + ", address:" + text.toString();
+	}
 
 	@Override
 	public String toString() {
 		return "City [city_id=" + cityId + ", cityName=" + cityName + ", listAddress=" + listAddress + "]";
 	}
-	
-	private void leerFicheroAddress(String nombreFichero) {
-		String linea;
-		try {
-			FileReader flujoLectura = new FileReader(nombreFichero);
-			BufferedReader filtroLectura = new BufferedReader(flujoLectura);
-			linea = filtroLectura.readLine();
-			while (linea != null) {
-				String[] campos = linea.split(",");
-				Address address = new Address(Integer.parseInt(campos[0]), campos[1]);
-				this.listAddress.add(address);
-				linea = filtroLectura.readLine();
-			}
-			filtroLectura.close();
-			flujoLectura.close();
-		} catch (FileNotFoundException e) {
-			System.out.println("No existe el fichero " + nombreFichero);
-		} catch (IOException e) {
-			System.out.println(e.getMessage());
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(cityId);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		City other = (City) obj;
+		return cityId == other.cityId;
+	}
+
+	@Override
+	public int compareTo(City o) {
+		int resultado = this.listAddress.size() - o.listAddress.size();
+		if(resultado == 0) {
+			resultado = this.cityName.compareTo(o.cityName);
 		}
+		return resultado;
 	}
 }

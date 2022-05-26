@@ -1,10 +1,7 @@
 package com.jacaranda.country;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Objects;
 
 public class Country {
@@ -17,15 +14,58 @@ public class Country {
 		this.countryId = countryId;
 		this.countryName = countryName;
 		this.listCity = new ArrayList<>();
-		leerFicheroCity("ficheros/city.txt");
+	}
+
+	public City searchIdCity(City city2) {
+		City city = null;
+		int position = this.listCity.indexOf(city2);
+
+		if (position != -1) {
+			city= this.listCity.get(position);
+		}
+
+		return city;
+	}
+
+	public void addCity(City city) {
+		this.listCity.add(city);
 	}
 	
+	public void addAddress(City aux, Address nueva) {
+		int position = this.listCity.indexOf(aux);
+		if(position != -1) {
+			this.listCity.get(position).addAddress(nueva);
+		}
+	}
+
 	public int getCountryId() {
 		return countryId;
 	}
 
 	public String getCountryName() {
 		return countryName;
+	}
+
+	public String writeFile() {
+		int numAddress = 0;
+		Collections.sort(this.listCity);
+
+		for (City aux : this.listCity) {
+			numAddress += aux.getAddressNum();
+		}
+		
+		return "Id:" + this.countryId + ", country name:" + this.countryName + ", number city:" + this.listCity.size()
+				+ ", number addres:" + numAddress;
+	}
+	
+	public String writeCityFile() {
+		StringBuilder text = new StringBuilder();
+		
+		for(City aux : this.listCity) {
+			text.append(aux.writeAddressFile() + "\n");
+		}
+		
+		return "Country name:" + this.countryName + "\n" + text.toString();
 	}
 
 	@Override
@@ -50,25 +90,4 @@ public class Country {
 		return countryId == other.countryId;
 	}
 
-	private void leerFicheroCity(String nombreFichero) {
-		String linea;
-		try {
-			FileReader flujoLectura = new FileReader(nombreFichero);
-			BufferedReader filtroLectura = new BufferedReader(flujoLectura);
-			linea = filtroLectura.readLine();
-			while (linea != null) {
-				String[] campos = linea.split(",");
-				City city = new City(Integer.parseInt(campos[0]), campos[1]);
-				this.listCity.add(city);
-				linea = filtroLectura.readLine();
-			}
-			filtroLectura.close();
-			flujoLectura.close();
-		} catch (FileNotFoundException e) {
-			System.out.println("No existe el fichero " + nombreFichero);
-		} catch (IOException e) {
-			System.out.println(e.getMessage());
-		}
-	}
-	
 }
