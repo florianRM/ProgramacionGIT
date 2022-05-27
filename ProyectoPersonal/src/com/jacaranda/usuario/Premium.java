@@ -7,9 +7,9 @@ import com.jacaranda.billete.BilleteException;
 
 public class Premium extends Usuario {
 	
-	public Premium(String login, String contrasenna) throws UsuarioException {
-		super(login, contrasenna);
-		super.premium = true;
+	public Premium(String login, String contrasenna, double saldo) throws UsuarioException {
+		super(login, contrasenna, saldo);
+		super.premium = 1;
 		pagarPremium();
 	}
 	
@@ -19,17 +19,40 @@ public class Premium extends Usuario {
 		}
 		super.saldo -= 15;
 	}
+	
+	@Override
+	public void comprarBillete(String nombrePasajero, String tipoBillete, LocalDateTime fechaSalida, String nombreAerolinia)
+			throws UsuarioException {
+		super.comprarBillete(nombrePasajero, tipoBillete, fechaSalida, nombreAerolinia);
+	}
+
+	@Override
+	public void comprarBillete(String nombrePasajero, String tipoBillete, LocalDateTime fechaSalida, LocalDateTime fechaVuelta,
+			String nombreAerolinia) throws UsuarioException {
+		super.comprarBillete(nombrePasajero, tipoBillete, fechaSalida, fechaVuelta, nombreAerolinia);
+	}
+	
+	@Override
+	public String calcularPrecio() throws UsuarioException {
+		return super.calcularPrecio();
+	}
+	
+	public double getSaldo() {
+		return super.saldo;
+	}
 
 	@Override
 	public void cancelarBillete(String nombrePasajero, LocalDateTime fecha) throws UsuarioException {
 		Billete aux;
 		try {
-			aux = new Billete(nombrePasajero, fecha, null);
+			aux = new Billete(nombrePasajero, null, fecha, null);
 		} catch (BilleteException e) {
 			throw new UsuarioException(e.getMessage());
 		}
 		int posicion = listaBilletes.indexOf(aux);
-		super.saldo += listaBilletes.get(posicion).getPrecioBillete();
-		listaBilletes.remove(posicion);
+		if(posicion != -1) {
+			super.saldo += listaBilletes.get(posicion).getPrecioBillete();
+			listaBilletes.remove(posicion);
+		}
 	}
 }

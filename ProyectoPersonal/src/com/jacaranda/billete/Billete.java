@@ -12,15 +12,16 @@ public class Billete {
 	private String nombreAerolinia;
 	private PrecioBilletes tipoBillete;
 	
-	public Billete(String nombrePasajero, LocalDateTime fechaSalida, String nombreAerolinia) throws BilleteException {
+	public Billete(String nombrePasajero, String tipoBillete, LocalDateTime fechaSalida, String nombreAerolinia) throws BilleteException {
 		super();
 		this.nombrePasajero = nombrePasajero;
 		this.fechaSalida = introducirFecha(fechaSalida);
 		this.nombreAerolinia = nombreAerolinia;
 		this.fechaCompra = LocalDateTime.now();
+		validarTipoBillete(tipoBillete);
 	}
 
-	public Billete(String nombrePasajero, LocalDateTime fechaSalida, LocalDateTime fechaVuelta,
+	public Billete(String nombrePasajero, String tipoBillete, LocalDateTime fechaSalida, LocalDateTime fechaVuelta,
 			String nombreAerolinia) throws BilleteException {
 		super();
 		this.nombrePasajero = nombrePasajero;
@@ -28,6 +29,7 @@ public class Billete {
 		this.fechaVuelta = introducirFecha(fechaVuelta);
 		this.nombreAerolinia = nombreAerolinia;
 		this.fechaCompra = LocalDateTime.now();
+		validarTipoBillete(tipoBillete);
 	}
 	
 	//Comprobamos que la fecha introducida no es anterior a la actual
@@ -38,27 +40,34 @@ public class Billete {
 		return fecha;
 	}
 	
-	//Devolvemos la diferencia de días que hay con la fecha de salida y la actual
+	private void validarTipoBillete(String tipoBillete) throws BilleteException {
+		PrecioBilletes tipo = null;
+		try {
+			tipo = PrecioBilletes.valueOf(tipoBillete.toUpperCase());
+		} catch (Exception e) {
+			throw new BilleteException("El tipo de billete no existe.");
+		}
+		this.tipoBillete = tipo;
+	}
+	
+	//Devolvemos la diferencia de dï¿½as que hay con la fecha de salida y la actual
 	private int diferenciaFecha() {
 		return (int) this.fechaCompra.until(fechaSalida, ChronoUnit.DAYS);
 	}
 	
-	public double calcularPrecio(String tipoBillete, int numPersonas) throws BilleteException {
-		PrecioBilletes tipo;
+	public double calcularPrecio(PrecioBilletes tipoBillete) throws BilleteException {
+		return this.getPrecioBillete();
+	}
+	
+	public double calcularPrecioPremium(PrecioBilletes tipoBillete) throws BilleteException {
 		int diasDiferencia = diferenciaFecha();
+		
 		double precio;
-		//Si el tipo de billete no es correcto lanzamos una excepción.
-		try {
-			tipo = PrecioBilletes.valueOf(tipoBillete.toUpperCase());
-			this.tipoBillete = tipo;
-		} catch (Exception e) {
-			throw new BilleteException("El tipo de billete es incorrecto.");
-		}
-		//Revisamos si hay 5 días o más de diferencia para aplicar el descuento
+		//Revisamos si hay 5 dï¿½as o mï¿½s de diferencia para aplicar el descuento
 		if(diasDiferencia >= 5) {
-			precio = (tipo.getPrecio() - (tipo.getPrecio() * 0.3)) * numPersonas;
+			precio = tipoBillete.getPrecio() - (tipoBillete.getPrecio() * 0.3);
 		} else {
-			precio = tipo.getPrecio() * numPersonas;
+			precio = tipoBillete.getPrecio();
 		}
 		
 		return precio;
@@ -74,6 +83,14 @@ public class Billete {
 
 	public LocalDateTime getFechaSalida() {
 		return fechaSalida;
+	}
+	
+	public PrecioBilletes getTipoBillete() {
+		return this.tipoBillete;
+	}
+	
+	public void setFechaSalida(LocalDateTime fechaSalida) throws BilleteException {
+		this.fechaSalida = introducirFecha(fechaSalida);
 	}
 
 	public LocalDateTime getFechaVuelta() {

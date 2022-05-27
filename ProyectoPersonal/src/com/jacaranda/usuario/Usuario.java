@@ -12,11 +12,12 @@ public abstract class Usuario {
 	private String contrasenna;
 	protected double saldo;
 	protected ArrayList<Billete> listaBilletes;
-	protected boolean premium;
+	protected int premium;
 
 	protected Usuario(String login, String contrasenna) {
 		this.login = login;
 		this.contrasenna = contrasenna;
+		this.listaBilletes = new ArrayList<>();
 	}
 	
 	protected Usuario(String login, String contrasenna, double saldo) throws UsuarioException {
@@ -26,26 +27,41 @@ public abstract class Usuario {
 		this.listaBilletes = new ArrayList<>();
 	}
 
-	public void comprarBillete(String nombrePasajero, LocalDateTime fechaSalida, String nombreAerolinia)
+	protected void comprarBillete(String nombrePasajero, String tipoBillete, LocalDateTime fechaSalida, String nombreAerolinia)
 			throws UsuarioException {
-		Billete nuevoBillete;
 		try {
-			nuevoBillete = new Billete(nombrePasajero, fechaSalida, nombreAerolinia);
+			this.listaBilletes.add(new Billete(nombrePasajero, tipoBillete, fechaSalida, nombreAerolinia));
 		} catch (BilleteException e) {
 			throw new UsuarioException(e.getMessage());
 		}
 	}
 
-	public void comprarBillete(String nombrePasajero, LocalDateTime fechaSalida, LocalDateTime fechaVuelta,
+	protected void comprarBillete(String nombrePasajero, String tipoBillete, LocalDateTime fechaSalida, LocalDateTime fechaVuelta,
 			String nombreAerolinia) throws UsuarioException {
 		try {
-			this.listaBilletes.add(new Billete(nombrePasajero, fechaSalida, fechaVuelta, nombreAerolinia));
+			this.listaBilletes.add(new Billete(nombrePasajero, tipoBillete, fechaSalida, fechaVuelta, nombreAerolinia));
 		} catch (BilleteException e) {
 			throw new UsuarioException(e.getMessage());
 		}
 	}
 
 	public abstract void cancelarBillete(String nombrePasajero, LocalDateTime fecha) throws UsuarioException;
+	
+	protected String calcularPrecio() throws UsuarioException {
+		double total = 0;
+		for(Billete aux : this.listaBilletes) {
+			try {
+				total += aux.calcularPrecio(aux.getTipoBillete());
+			} catch (BilleteException e) {
+				throw new UsuarioException(e.getMessage());
+			}
+		}
+		if(total > this.saldo) {
+			throw new UsuarioException("No tiene suficiente dinero.");
+		}
+		this.saldo -= total;
+		return "El total de los billetes es de " + total + " euros";
+	}
 	
 	public void setSaldo(double saldo) throws UsuarioException {
 		if(saldo < 0) {
