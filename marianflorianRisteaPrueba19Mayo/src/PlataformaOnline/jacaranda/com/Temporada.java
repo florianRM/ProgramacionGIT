@@ -129,13 +129,9 @@ public class Temporada {
 	public String escribirCapitulos() {
 		StringBuilder resultado = new StringBuilder();
 		for(String aux : this.capitulos) {
-			if(resultado.length() != 0) {
-				resultado.append(", "  + aux);
-			} else {
-				resultado.append(aux);
-			}
+			resultado.append(this.nombreTemporada + ", "  + aux + "\n");
 		}
-		return this.nombreTemporada + ", " + resultado.toString();
+		return resultado.toString();
 	}
 	
 	public String toString() {

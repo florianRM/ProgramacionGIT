@@ -87,7 +87,7 @@ public class Serie implements Comparable<Serie> {
 		StringBuilder resultado = new StringBuilder();
 		
 		for(Temporada aux : this.temporadas) {
-			resultado.append(aux.getNombreTemporada() + ", " + aux.getNumeroCapitulos() + ", " + aux.getNotaMedia());
+			resultado.append(aux.getNombreTemporada() + ", " + aux.getNumeroCapitulos() + ", " + aux.getNotaMedia() + "\n");
 		}
 		return resultado.toString();
 	}
@@ -103,7 +103,7 @@ public class Serie implements Comparable<Serie> {
 		
 		StringBuilder resultado = new StringBuilder();
 		for(Temporada aux : this.temporadas) {
-			resultado.append(aux.getNombreTemporada() + ", " + aux.getNumeroCapitulos() + ", " + aux.getNotaMedia());
+			resultado.append(aux.getNombreTemporada() + ", " + aux.getNumeroCapitulos() + ", " + aux.getNotaMedia() + "\n");
 		}
 		return resultado.toString();
 	}
@@ -174,13 +174,13 @@ public class Serie implements Comparable<Serie> {
 	}
 	
 	public String escribirFichero() {
-		return  nombreSerie + ", " + anno + ", " + tema;
+		return this.nombreSerie + ", " + this.anno + ", " + this.tema;
 	}
 	
 	public String getTemporada() {
 		StringBuilder resultado = new StringBuilder();
 		for(Temporada aux : this.temporadas) {
-			resultado.append(aux.escribirFichero() + "\n");
+			resultado.append(this.nombreSerie + ", " + aux.escribirFichero() + "\n");
 		}
 		return resultado.toString();
 	}
@@ -188,7 +188,7 @@ public class Serie implements Comparable<Serie> {
 	public String getCapitulos() {
 		StringBuilder resultado = new StringBuilder();
 		for(Temporada aux : this.temporadas) {
-			resultado.append(aux.escribirCapitulos() + "\n");
+			resultado.append(this.nombreSerie + ", " + aux.escribirCapitulos() + "\n");
 		}
 		return resultado.toString();
 	}

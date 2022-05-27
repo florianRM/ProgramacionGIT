@@ -1,6 +1,7 @@
 package Principal;
 
 import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Scanner;
@@ -32,7 +33,7 @@ public class Main {
 			
 			
 			System.out.println(series.toString());
-			System.out.println(series.listarPorNota() + "\n");
+			System.out.println(series.listarPorNota());
 			System.out.println(series.listarPorNumCapitulos());
 			
 			escribirFicheroSeries("fichero//Fichero Series.csv");
@@ -47,9 +48,9 @@ public class Main {
 	
 	private static void escribirFicheroSeries(String nombre) {
 		try {
-			PrintWriter flujoDeEscritura = new PrintWriter(nombre);
-			BufferedWriter filtroEscritura = new BufferedWriter(flujoDeEscritura);
-			filtroEscritura.write(series.getSeries());
+			FileWriter flujoDeEscritura = new FileWriter(nombre);
+			PrintWriter filtroEscritura = new PrintWriter(flujoDeEscritura);
+			filtroEscritura.println(series.getSeries());
 			filtroEscritura.close();
 			flujoDeEscritura.close();
 		} catch (IOException e) {
@@ -59,9 +60,9 @@ public class Main {
 	
 	private static void escribirFicheroTemporada(String nombre) {
 		try {
-			PrintWriter flujoDeEscritura = new PrintWriter(nombre);
-			BufferedWriter filtroEscritura = new BufferedWriter(flujoDeEscritura);
-			filtroEscritura.write(series.getTemporada());
+			FileWriter flujoDeEscritura = new FileWriter(nombre);
+			PrintWriter filtroEscritura = new PrintWriter(flujoDeEscritura);
+			filtroEscritura.println(series.getTemporada());
 			filtroEscritura.close();
 			flujoDeEscritura.close();
 		} catch (IOException e) {
@@ -71,9 +72,9 @@ public class Main {
 	
 	private static void escribirFicheroCapitulos(String nombre) {
 		try {
-			PrintWriter flujoDeEscritura = new PrintWriter(nombre);
-			BufferedWriter filtroEscritura = new BufferedWriter(flujoDeEscritura);
-			filtroEscritura.write(series.getCapitulos());
+			FileWriter flujoDeEscritura = new FileWriter(nombre);
+			PrintWriter filtroEscritura = new PrintWriter(flujoDeEscritura);
+			filtroEscritura.println(series.getCapitulos());
 			filtroEscritura.close();
 			flujoDeEscritura.close();
 		} catch (IOException e) {
