@@ -1,6 +1,7 @@
 package com.jacaranda.usuario;
 
 import java.time.LocalDateTime;
+import java.util.Iterator;
 
 import com.jacaranda.billete.Billete;
 import com.jacaranda.billete.BilleteException;
@@ -21,20 +22,20 @@ public class Premium extends Usuario {
 	}
 	
 	@Override
-	public void comprarBillete(String nombrePasajero, String tipoBillete, LocalDateTime fechaSalida, String nombreAerolinia)
-			throws UsuarioException {
-		super.comprarBillete(nombrePasajero, tipoBillete, fechaSalida, nombreAerolinia);
-	}
-
-	@Override
-	public void comprarBillete(String nombrePasajero, String tipoBillete, LocalDateTime fechaSalida, LocalDateTime fechaVuelta,
-			String nombreAerolinia) throws UsuarioException {
-		super.comprarBillete(nombrePasajero, tipoBillete, fechaSalida, fechaVuelta, nombreAerolinia);
-	}
-	
-	@Override
 	public String calcularPrecio() throws UsuarioException {
-		return super.calcularPrecio();
+		double total = 0;
+		for(Billete aux : this.listaBilletes) {
+			try {
+				total += aux.calcularPrecioPremium(aux.getTipoBillete());
+			} catch (BilleteException e) {
+				throw new UsuarioException(e.getMessage());
+			}
+		}
+		if(total > this.saldo) {
+			throw new UsuarioException("No tiene suficiente dinero.");
+		}
+		this.saldo -= total;
+		return "El total de los billetes es de " + total + " euros";
 	}
 	
 	public double getSaldo() {
@@ -43,16 +44,19 @@ public class Premium extends Usuario {
 
 	@Override
 	public void cancelarBillete(String nombrePasajero, LocalDateTime fecha) throws UsuarioException {
-		Billete aux;
-		try {
-			aux = new Billete(nombrePasajero, null, fecha, null);
-		} catch (BilleteException e) {
-			throw new UsuarioException(e.getMessage());
+		boolean encontrado = false;
+		Iterator<Billete> iterator = super.listaBilletes.iterator();
+		while(iterator.hasNext() && !encontrado) {
+			Billete aux = iterator.next();
+			if(aux.getDni().equalsIgnoreCase(nombrePasajero) && aux.getFechaSalida().equals(fecha)) {
+				super.saldo += aux.getPrecioBillete();
+				listaBilletes.remove(aux);
+				encontrado = true;
+			}
 		}
-		int posicion = listaBilletes.indexOf(aux);
-		if(posicion != -1) {
-			super.saldo += listaBilletes.get(posicion).getPrecioBillete();
-			listaBilletes.remove(posicion);
+		if(!encontrado) {
+			throw new UsuarioException("El billete no existe.");
 		}
+		
 	}
 }
