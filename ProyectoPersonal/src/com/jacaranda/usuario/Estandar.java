@@ -34,20 +34,4 @@ public class Estandar extends Usuario {
 		return super.saldo;
 	}
 	
-	@Override
-	public void cancelarBillete(String nombrePasajero, LocalDateTime fecha) throws UsuarioException {
-		boolean encontrado = false;
-		Iterator<Billete> iterator = super.listaBilletes.iterator();
-		while(iterator.hasNext() && !encontrado) {
-			Billete aux = iterator.next();
-			if(aux.getDni().equalsIgnoreCase(nombrePasajero) && aux.getFechaSalida().equals(fecha)) {
-				listaBilletes.remove(aux);
-				encontrado = true;
-			}
-		}
-		if(!encontrado) {
-			throw new UsuarioException("El billete no existe.");
-		}
-	}
-	
 }

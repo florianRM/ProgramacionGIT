@@ -13,6 +13,7 @@ import java.time.LocalDateTime;
 import java.util.Iterator;
 import java.util.Scanner;
 
+import com.jacaranda.billete.PrecioBilletes;
 import com.jacaranda.usuario.Estandar;
 import com.jacaranda.usuario.Premium;
 import com.jacaranda.usuario.Usuario;
@@ -163,9 +164,11 @@ public class Main {
 								if(seguir == 'S' || seguir == 's') {
 									if(premium) {
 										System.out.println(usuarioP.calcularPrecio() + " y su saldo es de " + usuarioP.getSaldo());
+										instruccion.executeQuery("UPDATE USUARIO SET SALDO = "+usuarioP.getSaldo()+"  WHERE LOGIN = '"+usuarioP.getLogin()+"'");
 										usuarioP.guardarBilletes();
 									} else {
 										System.out.println(usuarioE.calcularPrecio() + " y su saldo es de " + usuarioE.getSaldo());
+										instruccion.executeQuery("UPDATE USUARIO SET SALDO = "+usuarioE.getSaldo()+"  WHERE LOGIN = '"+usuarioE.getLogin()+"'");
 										usuarioE.guardarBilletes();
 									}
 								} else if(seguir == 'N' || seguir == 'n') {
@@ -211,18 +214,25 @@ public class Main {
 		Date fechaSalida = Date.valueOf(fecha.getYear() + "-" + fecha.getMonthValue() + "-" + fecha.getDayOfMonth());
 		Time horaSalida = Time.valueOf(fecha.getHour() + ":" + fecha.getMinute() + ":" + fecha.getSecond());
 		String fechaSalidaString = fechaSalida + " " + horaSalida;
-		
-		user.cancelarBillete(dni, fecha);
 		if(comprobarExistencia() == 1) {
-			instruccion.executeQuery("DELETE FROM BILLETES WHERE DNI = '"+dni+"' AND FECHA_SALIDA = TO_DATE('"+fechaSalidaString+"', 'yyyy-MM-dd hh:mi:ss'))");
-		} else {
-			System.out.println("El billete no existe.");
-		}
+			if(user instanceof Premium) {
+					resultado = instruccion.executeQuery("SELECT TIPO_BILLETE FROM BILLETES WHERE DNI = '"+dni+"' AND FECHA_SALIDA = TO_DATE('"+fechaSalidaString+"', 'yyyy-MM-dd hh24:mi:ss')");
+					resultado.next();
+					String tipo = resultado.getString(1);
+					instruccion.executeQuery("UPDATE USUARIO SET SALDO = SALDO + "+PrecioBilletes.valueOf(tipo).getPrecio()+" WHERE LOGIN = '"+user.getLogin()+"'");
+					instruccion.executeQuery("DELETE FROM BILLETES WHERE DNI = '"+dni+"' AND FECHA_SALIDA = TO_DATE('"+fechaSalidaString+"', 'yyyy-MM-dd hh24:mi:ss')");
+				} else {
+					System.out.println("El billete no existe.");
+				}
+			} else {
+				instruccion.executeQuery("DELETE FROM BILLETES WHERE DNI = '"+dni+"' AND FECHA_SALIDA = TO_DATE('"+fechaSalidaString+"', 'yyyy-MM-dd hh24:mi:ss')");
+			}
 	}
 	
 	private static int comprobarExistencia() throws SQLException {
 		resultado = instruccion.executeQuery("SELECT COUNT(DNI) FROM BILLETES");
-		return resultado.getInt(0);
+		resultado.next();
+		return resultado.getInt(1);
 	}
 	
 	private static void comprarBillete(Usuario user) throws UsuarioException {

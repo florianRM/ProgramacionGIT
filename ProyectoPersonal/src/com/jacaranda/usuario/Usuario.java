@@ -60,8 +60,6 @@ public abstract class Usuario {
 		}
 	}
 
-	public abstract void cancelarBillete(String nombrePasajero, LocalDateTime fecha) throws UsuarioException;
-
 	protected abstract String calcularPrecio() throws UsuarioException;
 
 	public void setSaldo(double saldo) throws UsuarioException {
